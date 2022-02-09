@@ -20,17 +20,17 @@ jobs:
           # we are excluding nightly builds because they can fail, and we want this to be
           # a required check
           - "1.6.5" # minimum Julia version that this package supports
-          - "1" # automatically expands to latest stable 1.x release of Julia
+          # - "1" # automatically expands to latest stable 1.x release of Julia
         os:
           - ubuntu-latest
           # - macos-latest
           # - windows-latest
         arch:
           - x64
-        include:
-          - os: ubuntu-latest
-            version: "1.0"
-            arch: x86
+        # include:
+        #   - os: ubuntu-latest
+        #     version: "1.0"
+        #     arch: x86
     steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
