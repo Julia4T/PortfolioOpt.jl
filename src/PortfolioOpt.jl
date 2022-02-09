@@ -22,6 +22,11 @@ function testing_package_dev(arg1::String)
     return true
 end
 
+function testing_package_dev(arg1::Array)
+    println(arg1)
+    return true
+end
+
 export testing_package_dev
 
 end
