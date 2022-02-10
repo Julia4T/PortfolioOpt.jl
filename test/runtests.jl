@@ -2,5 +2,5 @@ using PortfolioOpt
 using Test
 
 @testset "PortfolioOpt.jl" begin
-    # Write your tests here.
+    @test testing_package_dev(1) == true
 end

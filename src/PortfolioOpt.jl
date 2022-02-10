@@ -1,14 +1,29 @@
 module PortfolioOpt
 
+"""
+    testing_package_dev(arg1::Number)
+Testing function
+# Arguments
+- `arg1::Number`: testing function argument1
+"""
+function testing_package_dev(arg1::Number)
+    println(arg1)
+    return true
+end
 
 """
-    main(arg1)
-Main entry point for the package.
+    testing_package_dev(arg1::String)
+Testing function
 # Arguments
-- `arg1::ANY`: testing function argument1
+- `arg1::String`: testing function argument1
 """
-function testing_package_dev(arg1)
-    println(string(arg1))
+function testing_package_dev(arg1::String)
+    println(arg1)
+    return true
+end
+
+function testing_package_dev(arg1::Array)
+    println(arg1)
     return true
 end
 
