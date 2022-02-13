@@ -25,13 +25,13 @@ jobs:
             Pkg.develop(PackageSpec(path=pwd()))
             Pkg.instantiate()'
       - name: Test
-      - run: |
+        run: |
           julia --project=docs -e '
             using Documenter: doctest
             using PortfolioOpt
             doctest(PortfolioOpt)'
       - name: Build and deploy
-      - run: julia --project=docs/ docs/make.jl
+        run: julia --project=docs/ docs/make.jl
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
