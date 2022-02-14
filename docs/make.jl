@@ -20,5 +20,6 @@ makedocs(;
 
 deploydocs(;
     repo="github.com/bicepjai/PortfolioOpt.jl",
-    devbranch="main",
+    devbranch="testing",
+    branch = "gh-pages-testing",
 )
