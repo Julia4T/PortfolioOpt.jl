@@ -1,0 +1,22 @@
+name: docs
+
+# From: https://github.com/JuliaDocs/Documenter.jl/blob/master/.github/workflows/CI.yml
+#     + https://discourse.julialang.org/t/easy-workflow-file-for-setting-up-github-actions-ci-for-your-julia-package/49765
+on:
+  push:
+    branches:
+      - testing
+  pull_request:
+    branches:
+      - testing
+jobs:
+  docs:
+    name: Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: julia-actions/julia-buildpkg@latest
+      - uses: julia-actions/julia-docdeploy@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}

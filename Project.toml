@@ -3,6 +3,9 @@ uuid = "ebe4fdaa-a62b-4ab4-9e0c-ba957fcc7f92"
 authors = ["Jayaram Prabhu Durairaj <bicepjai@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+DocumenterTools = "35a29f4d-8980-5a13-9543-d66fff28ecb8"
+
 [compat]
 julia = "1"
 
