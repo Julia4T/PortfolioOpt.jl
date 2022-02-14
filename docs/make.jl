@@ -13,13 +13,11 @@ makedocs(;
         canonical="https://bicepjai.github.io/PortfolioOpt.jl",
         assets=String[],
     ),
-    pages=[
-        "Home" => "index.md",
-    ],
+    pages=["Home" => "index.md"],
 )
 
 deploydocs(;
     repo="github.com/bicepjai/PortfolioOpt.jl",
     devbranch="testing",
-    branch = "gh-pages-testing",
+    branch="gh-pages-testing",
 )
