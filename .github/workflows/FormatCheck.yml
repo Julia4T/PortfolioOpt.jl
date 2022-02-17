@@ -1,7 +1,4 @@
-name: format
-
-# https://github.com/julia-actions/julia-format/blob/master/workflows/format_check.yml
-
+name: Format
 on:
   push:
     branches:
@@ -10,18 +7,10 @@ on:
     branches:
       - 'testing'
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        julia-version: [1.6.5]
-        julia-arch: [x86]
-        os: [ubuntu-latest]
+  format-check:
+    runs-on: ubuntu-latest
     steps:
       - uses: julia-actions/setup-julia@latest
-        with:
-          version: ${{ matrix.julia-version }}
-
       - uses: actions/checkout@v1
       - name: Install JuliaFormatter and format
         run: |

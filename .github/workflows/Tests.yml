@@ -1,41 +1,21 @@
-name: tests
+name: Tests
 
 # https://discourse.julialang.org/t/easy-workflow-file-for-setting-up-github-actions-ci-for-your-julia-package/49765
 on:
   push:
     branches:
-      - testing
+      - develop
+      - main
   pull_request:
     branches:
       - testing
 jobs:
-  test:
-    name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        version:
-          # we are excluding nightly builds because they can fail, and we want this to be
-          # a required check
-          - "1.6.5" # minimum Julia version that this package supports
-          # - "1" # automatically expands to latest stable 1.x release of Julia
-        os:
-          - ubuntu-latest
-          # - macos-latest
-          # - windows-latest
-        arch:
-          - x64
-        # include:
-        #   - os: ubuntu-latest
-        #     version: "1.0"
-        #     arch: x86
+  running-tests:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
         with:
-          version: ${{ matrix.version }}
-          arch: ${{ matrix.arch }}
           show-versioninfo: true
       - uses: actions/cache@v1
         env:
