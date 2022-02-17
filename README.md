@@ -17,7 +17,7 @@ Also lots of influences on API design from [PyPortfolioOpt](https://github.com/r
     <img src="https://img.shields.io/badge/docs-dev-blue.svg"
         alt="docs url"></a> &nbsp;
 
-![format](https://github.com/bicepjai/PortfolioOpt.jl/actions/workflows/JuliaFormatCheck.yml/badge.svg?branch=testing&event=push)
+![format](https://github.com/bicepjai/PortfolioOpt.jl/actions/workflows/FormatCheck.yml/badge.svg?branch=testing&event=push)
 <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg"
         alt="MIT license"></a> &nbsp;
