@@ -1,12 +1,8 @@
-name: FormatCheck
-
-# https://github.com/julia-actions/julia-format/blob/master/workflows/format_check.yml
-
+name: Format
 on:
   push:
     branches:
-      - develop
-      - main
+      - 'testing'
   pull_request:
     branches:
       - 'testing'
@@ -14,7 +10,7 @@ jobs:
   format-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: julia-actions/setup-julia@@v1
+      - uses: julia-actions/setup-julia@latest
       - uses: actions/checkout@v1
       - name: Install JuliaFormatter and format
         run: |
