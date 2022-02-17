@@ -1,4 +1,4 @@
-name: format
+name: FormatCheck
 
 # https://github.com/julia-actions/julia-format/blob/master/workflows/format_check.yml
 

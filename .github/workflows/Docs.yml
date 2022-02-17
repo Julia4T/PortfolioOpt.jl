@@ -1,4 +1,4 @@
-name: docs
+name: Docs
 
 # From: https://github.com/JuliaDocs/Documenter.jl/blob/master/.github/workflows/CI.yml
 #     + https://discourse.julialang.org/t/easy-workflow-file-for-setting-up-github-actions-ci-for-your-julia-package/49765
