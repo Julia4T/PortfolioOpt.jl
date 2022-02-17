@@ -5,7 +5,8 @@ name: docs
 on:
   push:
     branches:
-      - testing
+      - develop
+      - main  
   pull_request:
     branches:
       - testing
