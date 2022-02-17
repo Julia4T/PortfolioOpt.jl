@@ -16,8 +16,6 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          # we are excluding nightly builds because they can fail, and we want this to be
-          # a required check
           - "1.6.5" # minimum Julia version that this package supports
           - "1" # automatically expands to latest stable 1.x release of Julia
         os:
